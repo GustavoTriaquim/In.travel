@@ -25,6 +25,11 @@ const Modal = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    height: 70%;
+  }
 `;
 
 const Img = styled.img`
@@ -73,6 +78,13 @@ const InputBackground = styled.div`
   &:hover {
     transform: scale(1.05) ;
   }
+
+  @media (max-width: 1000px) {
+    width: 90%;
+    gap: 7px;
+    padding: 0 15px;
+    transition: 0s;
+  }
 `;
 
 const Input = styled.input`
@@ -91,17 +103,29 @@ const Input = styled.input`
   &::placeholder {
     color: #2e2e2e;
   }
+
+  @media (max-width: 1000px) {
+    text-align: center;
+  }
 `;
 
 const InputIcon = styled(FontAwesomeIcon)`
   font-size: 27px;
   margin-left: 15px;
   color: #2e2e2e;
+
+  @media (max-width: 1000px) {
+    margin-left: 0px;
+  }
 `;
 
 const Buttons = styled.div`
   display: flex;
   gap: 40px ;
+
+  @media (max-width: 1000px) {
+    gap: 20px;
+  }
 `;
 
 const InputButton = styled.button`
@@ -122,10 +146,24 @@ const InputButton = styled.button`
     border: 1px solid #f1f1f19d;
     cursor: pointer;
   }
+
+  @media (max-width: 1000px) {
+    width: 35vw;
+    justify-content: center;
+    transition: 0s;
+
+    &:hover {
+      transform: none;
+      border: none;
+    }
+  }
 `;
 
 const InvitedDiv = styled.div`
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 `;
 
 const Invited = styled.div`
@@ -138,10 +176,18 @@ const Invited = styled.div`
   gap: 15px;
   background-color: #121212;
   width: 250px;
+
+  @media (max-width: 1000px) {
+    width: 55vw;
+  }
 `;
 
 const InvitedText = styled.p`
   color: #808080;
+
+  @media (max-width: 1000px) {
+    font-size: 15px;
+  }
 `;
 
 const InvitedIcon = styled(FontAwesomeIcon)`
@@ -152,6 +198,20 @@ const InvitedIcon = styled(FontAwesomeIcon)`
     color: #f1f1f1;
     transform: scale(1.1);
     cursor: pointer;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 17px;
+    transition: 0s;
+
+    &:hover {
+      color: #808080;
+      transform: none;
+    }
+
+    &:active {
+      color: #f1f1f1;
+    }
   }
 `;
 
@@ -185,6 +245,14 @@ const IconButton = styled.button`
     transform: scale(1.1);
     cursor: pointer;
   }
+
+  @media (max-width: 1000px) {
+    transition: 0s;
+
+    &:hover {
+      transform: none;
+    }
+  }
 `;
 
 const Icon = styled(FontAwesomeIcon)`
@@ -194,6 +262,18 @@ const Icon = styled(FontAwesomeIcon)`
 
   &:hover {
     color: #f1f1f1;
+  }
+
+  @media (max-width: 1000px) {
+    transition: 0s;
+    
+    &:hover {
+      color: #535353;
+    }
+
+    &:active {
+      color: #f1f1f1;
+    }
   }
 `;
 
@@ -217,7 +297,7 @@ function InviteContainer() {
             </InvitedDiv>
             <Buttons>
               <InputButton type="button" style={{ backgroundColor: '#2e2e2e' }}>ADICIONAR</InputButton>
-              <InputButton type="submit">CONVIDAR</InputButton>
+              <InputButton type="submit">CONTINUAR</InputButton>
             </Buttons>
           </Form>
         </InfoDiv>

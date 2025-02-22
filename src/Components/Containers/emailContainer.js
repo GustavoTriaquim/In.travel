@@ -25,6 +25,11 @@ const Modal = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    height: 60%;
+  }
 `;
 
 const Img = styled.img`
@@ -57,6 +62,17 @@ const InputBackground = styled.div`
   &:hover {
     transform: scale(1.05) ;
   }
+  
+  @media (max-width: 1000px) {
+    width: 90%;
+    transition: 0s;
+    gap: 7px;
+    padding: 0px 15px;
+
+    &:hover {
+      transform: none;
+    }
+  }
 `;
 
 const Input = styled.input`
@@ -75,12 +91,21 @@ const Input = styled.input`
   &::placeholder {
     color: #2e2e2e;
   }
+
+  @media (max-width: 1000px) {
+    text-align: center;
+  }
 `;
 
 const InputIcon = styled(FontAwesomeIcon)`
   font-size: 27px;
   margin-left: 15px;
   color: #2e2e2e;
+
+  @media (max-width: 1000px) {
+    font-size: 25px;
+    margin-left: 0px;
+  }
 `;
 
 const InputButton = styled.button`
@@ -100,6 +125,23 @@ const InputButton = styled.button`
     transform: scale(1.05);
     border: 1px solid #f1f1f19d;
     cursor: pointer;
+  }
+
+  @media (max-width: 1000px) {
+    width: 50%;
+    justify-content: center;
+    transition: 0s;
+
+    &:hover {
+      transform: none;
+      border: none;
+    }
+
+    &:active {
+      color: #e2830e;
+      background-color: #f1f1f1;
+      border: 1px solid #e2830e;
+    }
   }
 `;
 
@@ -137,6 +179,14 @@ const IconButton = styled.button`
     transform: scale(1.1);
     cursor: pointer;
   }
+
+  @media (max-width: 1000px) {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
 `;
 
 const Icon = styled(FontAwesomeIcon)`
@@ -146,6 +196,18 @@ const Icon = styled(FontAwesomeIcon)`
 
   &:hover {
     color: #f1f1f1;
+  }
+
+  @media (max-width: 1000px) {
+    transition: 0s;
+
+    &:hover {
+      color: #535353;
+    }
+
+    &:active {
+      color: #f1f1f1;
+    }
   }
 `;
 
